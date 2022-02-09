@@ -21,7 +21,7 @@ for i, r in table.iterrows():
     first_name = r['First Name']
     company = r['Company Name']
     role = r['Role in Company']
-    #last_name = r['Last Name']
+    last_name = r['Last Name']
     address = r['Address']
     email = r['Email']
     phone = r['Phone Number']
@@ -31,8 +31,8 @@ for i, r in table.iterrows():
     preenche.send_keys(first_name)
     
     #Preencher Last Name;
-    #preenche = web.find_element(By.XPATH,"//input[@ng-reflect-name='labelLastName']")
-    #preenche.send_keys(last_name)
+    preenche = web.find_element(By.XPATH,"//input[@ng-reflect-name='labelLastName']")
+    preenche.send_keys(last_name)
    
     #Preencher Company Name;
     preenche = web.find_element(By.XPATH,'//input[@ng-reflect-name="labelCompanyName"]')
