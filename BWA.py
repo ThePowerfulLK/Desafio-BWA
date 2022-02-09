@@ -19,9 +19,9 @@ button = web.find_element(By.XPATH,'//button[text() = "Start" ]').click()
 #Função para varrer as linhas e colunas da tabela;
 for i, r in table.iterrows():        
     first_name = r['First Name']
-   # last_name = r['Last Name']
     company = r['Company Name']
     role = r['Role in Company']
+    #last_name = r['Last Name']
     address = r['Address']
     email = r['Email']
     phone = r['Phone Number']
@@ -29,30 +29,31 @@ for i, r in table.iterrows():
     #Preencher First Name; 
     preenche = web.find_element(By.XPATH,"//input[@ng-reflect-name='labelFirstName']")
     preenche.send_keys(first_name)
+    
     #Preencher Last Name;
-    
-   # preenche = web.find_element(By.XPATH,"//input[@ng-reflect-name='labelLastName']")
-   # preenche.send_keys(last_name)
+    #preenche = web.find_element(By.XPATH,"//input[@ng-reflect-name='labelLastName']")
+    #preenche.send_keys(last_name)
+   
     #Preencher Company Name;
-    
     preenche = web.find_element(By.XPATH,'//input[@ng-reflect-name="labelCompanyName"]')
     preenche.send_keys(company)
-    #Preencher Role Company;
-    
+  
+    #Preencher Role in Company;
     preenche = web.find_element(By.XPATH,'//input[@ng-reflect-name="labelRole"]')
     preenche.send_keys(role)
-    #Preencher Adress;
     
+    #Preencher Adress;
     preenche = web.find_element(By.XPATH,'//input[@ng-reflect-name="labelAddress"]')
     preenche.send_keys(address)
-    #Preencher Email;
     
+    #Preencher Email;
     preenche = web.find_element(By.XPATH,'//input[@ng-reflect-name="labelEmail"]')
     preenche.send_keys(email)
-    #Preencher Phone Number;
     
+    #Preencher Phone Number;
     preenche = web.find_element(By.XPATH,'//input[@ng-reflect-name="labelPhone"]')
     preenche.send_keys(phone)
+   
     #Pressionar botão de envio de formulário;
     button = web.find_element(By.XPATH,'//input[@value = "Submit"]')
     button.click()
