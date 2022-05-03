@@ -1,6 +1,6 @@
 O código foi feito utilizando um ambiente virtual.
 Para um bom funcionamento do código, verifique se o 'Pandas' e o 'Selenium' estão devidamente instalados e atualizados.
-Verão do Python 3.10.2
+Versão do Python 3.10.2
 
 
 
